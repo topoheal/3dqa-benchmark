@@ -1,3 +1,7 @@
+This license applies ONLY to the runner scripts (`scripts/`), manifests, and
+aggregate results in this repository (the "Software"). It does NOT apply to
+the `3dqa` package these scripts depend on...  
+
 MIT License
 
 Copyright (c) 2026 3D Pipeline QA Engine
