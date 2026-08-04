@@ -1,6 +1,12 @@
 This license applies ONLY to the runner scripts (`scripts/`), manifests, and
 aggregate results in this repository (the "Software"). It does NOT apply to
-the `3dqa` package these scripts depend on...  
+the `3dqa` package these scripts depend on, which is published separately to
+PyPI under its own proprietary, free-use license (see
+https://pypi.org/project/3dqa/), nor to the third-party 3D Arena dataset
+these scripts measure, which is MIT-licensed separately by its own authors
+(see the Attribution section in README.md).
+
+---
 
 MIT License
 
@@ -23,12 +29,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
-
----
-
-This license applies to the runner scripts (`scripts/`), manifests, and
-aggregate results in this repository. It does NOT apply to the `3dqa`
-package these scripts depend on (published separately to PyPI under its own
-proprietary, free-use license — see https://pypi.org/project/3dqa/), nor to
-the third-party 3D Arena dataset these scripts measure (MIT-licensed
-separately by its own authors — see the Attribution section in README.md).
