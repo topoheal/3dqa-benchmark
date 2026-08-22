@@ -1,4 +1,4 @@
-# The State of AI-Generated 3D Assets — a public census
+# The State of AI-Generated 3D Assets, a public census
 
 > Produced by `scripts/generate_benchmark_report.py` from `results/aggregate.json`. Every number below was measured by `batch_lint.py` / `batch_lint_parallel.py` over real files on disk — none is hand-typed or extrapolated. Geometry-only: deterministic, $0, millisecond-scale per asset. No texture-class QA (this tier never samples a texture map).
 
@@ -12,7 +12,7 @@ All assets analyzed here come from the [**3D Arena**](https://huggingface.co/dat
 dataset on Hugging Face, dataset-level licensed **MIT**. This repo does not
 redistribute the assets themselves (`manifests/3d_arena_corpus.jsonl` lists
 their remote paths; `scripts/fetch_real_assets.sh` re-downloads them from the
-original source) — only the measurements taken over them. Full credit for
+original source) only the measurements taken over them. Full credit for
 the underlying generative outputs and the dataset's curation goes to the 3D
 Arena project and the individual generator teams whose outputs it hosts.
 
@@ -66,7 +66,7 @@ Of assets that FAILED lint (n=1501): **45.0%** heal fully, **49.8%** heal partia
 
 **Regressions introduced by healing: 454 asset(s).** Reported here regardless of how small, per this project's own rule that a repair must never hide a regression.
 
-## Failure taxonomy — what dry-run repair could not fix
+## Failure taxonomy, what dry-run repair could not fix
 
 | Unfixable finding | Occurrences | Share of unfixable findings |
 |---|---:|---:|
@@ -80,7 +80,7 @@ Of assets that FAILED lint (n=1501): **45.0%** heal fully, **49.8%** heal partia
 
 p50: **15,458 ms** · p90: **45,358 ms** · max: **450,462 ms**. Measured on this machine, single-process-per-shard; see `scripts/batch_lint_parallel.py` for the parallel run that produced this file.
 
-## Lint-only timing (no repair) — the number comparable to the curated-sample claim
+## Lint-only timing (no repair), the number comparable to the curated-sample claim
 
 p50: **128.6 ms** · p90: **1294.3 ms** · max: **32061.5 ms** (n=2004). A separately-measured 6-asset curated baseline (22k-65k faces) reported "2.7-8 ms" the same way (lint only, no dry-run repair); this row is the same measurement at full-corpus scale (median 77k faces, up to 6.1M) and is 15-45x higher at the median — do not quote the 6-asset number as general. See `scripts/measure_lint_timing.py`.
 
@@ -117,5 +117,5 @@ python scripts/generate_benchmark_report.py --aggregate results/aggregate.json \
 ```
 
 This runner imports `geometry_linter`/`repair_engine`/`qa_profiles` from the
-installed `3dqa` package — nothing in this repo needs private source, which
+installed `3dqa` package, nothing in this repo needs private source, which
 is the whole point of publishing it this way.
